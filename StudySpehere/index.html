@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudySphere | Student Workspace</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside>
+    <h2>StudySphere.</h2>
+    <p>STUDENT WORKSPACE</p>
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#timer">Focus Timer</a>
+        <a href="#tasks">Study Tasks</a>
+        <a href="#notes">My Notes</a>
+    </nav>
+</aside>
+
+<main>
+    <header id="overview">
+        <div>
+            <h1>Good Study Day!</h1>
+            <p>Organize your learning and track your progress.</p>
+        </div>
+        <span id="today"></span>
+    </header>
+
+    <section class="stats">
+        <article><p>Completed Tasks</p><h2 id="completed">0</h2></article>
+        <article><p>Pending Tasks</p><h2 id="pending">0</h2></article>
+        <article><p>Focus Sessions</p><h2 id="sessions">0</h2></article>
+    </section>
+
+    <section class="panel" id="timer">
+        <h2>Focus Timer</h2>
+        <div id="clock">25:00</div>
+        <div class="timer-controls">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+        <p id="timerStatus">Ready for your next focus session.</p>
+    </section>
+
+    <section class="panel" id="tasks">
+        <h2>Study Planner</h2>
+        <form id="taskForm">
+            <input id="taskInput" placeholder="Enter a study task..." required>
+            <button>Add Task</button>
+        </form>
+        <ul id="taskList"></ul>
+    </section>
+
+    <section class="panel" id="notes">
+        <h2>Quick Notes</h2>
+        <input id="noteTitle" placeholder="Note title">
+        <textarea id="noteContent" placeholder="Write your notes here..."></textarea>
+        <button onclick="saveNote()">Save Note</button>
+        <div id="noteList"></div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
