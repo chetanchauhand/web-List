@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack - Expense Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>FinTrack</h1>
+    <p>Personal Finance Dashboard</p>
+</header>
+
+<main>
+    <section class="summary">
+        <div class="card">
+            <p>Total Income</p>
+            <h2 id="income">₹0</h2>
+        </div>
+
+        <div class="card">
+            <p>Total Expenses</p>
+            <h2 id="expense">₹0</h2>
+        </div>
+
+        <div class="card">
+            <p>Available Balance</p>
+            <h2 id="balance">₹0</h2>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Add Transaction</h2>
+
+        <form id="transactionForm">
+            <input type="text" id="title" placeholder="Transaction title" required>
+
+            <input type="number" id="amount" placeholder="Amount (₹)" min="1" step="0.01" required>
+
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <select id="category">
+                <option value="Salary">Salary</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Education">Education</option>
+                <option value="Bills">Bills</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button type="submit">Add Transaction</button>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Transaction History</h2>
+        <div id="transactions"></div>
+    </section>
+
+    <section class="panel">
+        <h2>Expense Breakdown</h2>
+        <div id="chart"></div>
+    </section>
+</main>
+
+<footer>
+    FinTrack | Manage Your Money Smartly
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
