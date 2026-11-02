@@ -1,0 +1,103 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080d18;
+    color: #e8f1ff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 35px;
+    background: #101b2d;
+    border-bottom: 1px solid #1c3650;
+}
+
+header h1 {
+    color: #00e5ff;
+    letter-spacing: 4px;
+}
+
+header span {
+    color: white;
+}
+
+header p {
+    color: #8ca5bd;
+    margin-top: 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: 35px auto;
+}
+
+.panel {
+    background: #111d30;
+    border: 1px solid #263d58;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.panel h2 {
+    color: #00e5ff;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #34516e;
+    border-radius: 7px;
+    background: #081321;
+    color: white;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #00c8dc;
+    color: #06121d;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px 4px 5px 0;
+}
+
+button:hover {
+    background: #65f3ff;
+}
+
+.meter {
+    height: 10px;
+    background: #26384d;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#bar {
+    width: 0;
+    height: 100%;
+    background: #ff4444;
+    transition: 0.3s;
+}
+
+#result, #urlResult, #quizResult {
+    margin-top: 15px;
+    color: #b9d2e9;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #7890a8;
+}

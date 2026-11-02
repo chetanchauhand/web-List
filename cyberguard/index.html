@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard | Security Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>CYBER<span>GUARD</span></h1>
+    <p>Personal Security Dashboard</p>
+</header>
+
+<main>
+    <section class="panel">
+        <h2>Password Strength Checker</h2>
+        <input type="password" id="password" placeholder="Enter your password">
+        <button onclick="checkPassword()">Check Strength</button>
+        <div class="meter"><div id="bar"></div></div>
+        <h3 id="result">Waiting for password...</h3>
+    </section>
+
+    <section class="panel">
+        <h2>URL Safety Checker</h2>
+        <input type="text" id="url" placeholder="Enter website URL">
+        <button onclick="checkURL()">Analyze URL</button>
+        <p id="urlResult">No URL analyzed yet.</p>
+    </section>
+
+    <section class="panel">
+        <h2>Cyber Security Quiz</h2>
+        <p id="question">What does HTTPS indicate?</p>
+        <div id="answers">
+            <button onclick="answer(0)">A. Encrypted connection</button>
+            <button onclick="answer(1)">B. Free website</button>
+            <button onclick="answer(2)">C. Faster internet</button>
+        </div>
+        <h3 id="quizResult"></h3>
+        <button onclick="nextQuestion()">Next Question</button>
+    </section>
+</main>
+
+<footer>CyberGuard | Built with HTML, CSS & JavaScript</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
