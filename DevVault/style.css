@@ -1,0 +1,23 @@
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a101c;color:#edf2ff;font-family:Arial,sans-serif}
+header{padding:23px 7%;background:#151e30;display:flex;justify-content:space-between;align-items:center}
+header h2{color:#8eafff}
+header span{font-size:11px;color:#91a2bc}
+main{max-width:1200px;margin:35px auto;padding:0 20px}
+.hero{padding:35px;background:#202c49;border-radius:12px;margin-bottom:25px}
+.hero h1{font-size:36px;margin-bottom:10px}
+.hero p{color:#a7b5cc}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.tool{background:#151f32;padding:25px;border:1px solid #30415c;border-radius:12px}
+.tool h2{margin-bottom:18px;color:#a8bfff}
+textarea,input{width:100%;padding:13px;background:#0a1425;color:white;border:1px solid #394b69;border-radius:7px;margin-bottom:12px}
+textarea{min-height:130px;resize:vertical}
+button{padding:11px 16px;background:#587de0;color:white;border:0;border-radius:6px;cursor:pointer;margin:4px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#091321;padding:15px;margin:15px 0;border-radius:7px;max-height:220px;overflow:auto}
+#palette{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}
+.swatch{width:75px;height:75px;border-radius:8px;display:grid;place-items:end center;padding:5px;font-size:10px;cursor:pointer}
+#snippets{margin-top:15px}
+.snippet{padding:12px;background:#0c1729;margin:8px 0;border-radius:7px;overflow-wrap:anywhere}
+#preview{padding:18px;background:#0b1729;border-radius:8px;min-height:100px;overflow-wrap:anywhere}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.hero h1{font-size:29px}}

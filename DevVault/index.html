@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DevVault | Developer Toolkit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h2>DevVault.</h2>
+<span>YOUR DEVELOPER WORKSPACE</span>
+</header>
+<main>
+<section class="hero">
+<h1>Tools for developers.</h1>
+<p>Useful utilities in one workspace.</p>
+</section>
+
+<section class="grid">
+<article class="tool">
+<h2>JSON Formatter</h2>
+<textarea id="jsonInput" placeholder='{"name":"Chetan","role":"Developer"}'></textarea>
+<div class="buttons">
+<button onclick="formatJSON()">Format</button>
+<button onclick="minifyJSON()">Minify</button>
+</div>
+<pre id="jsonOutput"></pre>
+<button onclick="copyText('jsonOutput')">Copy Output</button>
+</article>
+
+<article class="tool">
+<h2>Color Palette Generator</h2>
+<input type="color" id="colorInput" value="#5678ff">
+<button onclick="generatePalette()">Generate Palette</button>
+<div id="palette"></div>
+</article>
+
+<article class="tool">
+<h2>Code Snippet Manager</h2>
+<input id="snippetTitle" placeholder="Snippet title">
+<textarea id="snippetCode" placeholder="Paste your code"></textarea>
+<button onclick="saveSnippet()">Save Snippet</button>
+<div id="snippets"></div>
+</article>
+
+<article class="tool">
+<h2>Markdown Previewer</h2>
+<textarea id="markdownInput" placeholder="# Hello Developer&#10;Write **Markdown** here..."></textarea>
+<div id="preview"></div>
+</article>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
