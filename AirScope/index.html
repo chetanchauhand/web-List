@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AirScope | Environment Monitor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h2>AirScope.</h2>
+<span>WEATHER & ENVIRONMENT INTELLIGENCE</span>
+</header>
+<main>
+<section class="search">
+<h1>Understand your environment.</h1>
+<p>Weather conditions and air quality at a glance.</p>
+<input id="city" placeholder="Search city e.g. Delhi">
+<button onclick="searchCity()">Search</button>
+<button onclick="useLocation()">My Location</button>
+</section>
+<section class="weather panel">
+<p id="location">Search for a city</p>
+<h1 id="temperature">--°C</h1>
+<h2 id="condition">Weather information</h2>
+<div class="stats">
+<div><span>Feels Like</span><h3 id="feels">--</h3></div>
+<div><span>Humidity</span><h3 id="humidity">--</h3></div>
+<div><span>Wind</span><h3 id="wind">--</h3></div>
+<div><span>Air Quality</span><h3 id="aqi">--</h3></div>
+</div>
+<p id="updated"></p>
+</section>
+<section class="panel">
+<h2>Weather Forecast</h2>
+<div id="forecast" class="forecast"></div>
+</section>
+<p class="note">Weather data: Open-Meteo. AQI is an estimate from the European AQI scale.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

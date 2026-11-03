@@ -1,0 +1,25 @@
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#091321;color:#edf4ff;font-family:Arial,sans-serif}
+header{background:#14243a;padding:23px 7%;display:flex;justify-content:space-between;align-items:center}
+header h2{color:#68c9d5}
+header span{font-size:11px;color:#93a9c1}
+main{max-width:1000px;margin:40px auto;padding:0 20px}
+.search{padding:35px;background:linear-gradient(120deg,#164d65,#283f6a);border-radius:15px;margin-bottom:25px}
+.search h1{font-size:35px;margin-bottom:12px}
+.search p{color:#c3d9e7;margin-bottom:20px}
+input{padding:14px;background:#0c1c30;color:white;border:1px solid #405575;border-radius:7px;margin:5px}
+button{padding:14px 18px;background:#27a5b2;color:white;border:0;border-radius:7px;cursor:pointer;margin:5px}
+.panel{background:#14243a;border:1px solid #304561;border-radius:14px;padding:28px;margin-bottom:25px}
+.weather{text-align:center}
+#temperature{font-size:75px;color:#70d2dd;margin:20px}
+#condition{color:#b4c7dc}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:35px}
+.stats div{padding:20px;background:#1d304a;border-radius:10px}
+.stats span{color:#9bb0c9;font-size:13px}
+.stats h3{margin-top:12px;color:#7de0dc}
+.forecast{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.day{padding:15px;background:#1d304a;border-radius:10px;text-align:center}
+.day p{margin:10px 0;color:#b7c8dd}
+.note{color:#8ea4bd;font-size:12px;margin:20px 0}
+@media(max-width:650px){.stats{grid-template-columns:repeat(2,1fr)}.forecast{grid-template-columns:repeat(2,1fr)}header{gap:12px;flex-wrap:wrap}.search h1{font-size:28px}}
