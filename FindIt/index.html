@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FindIt | Lost & Found</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h2>FindIt.</h2>
+<span>COMMUNITY LOST & FOUND</span>
+</header>
+<main>
+<section class="hero">
+<h1>Lost something?<br>Let's find it.</h1>
+<p>A community platform for reporting and discovering lost items.</p>
+</section>
+<section class="panel">
+<h2>Report an Item</h2>
+<form id="itemForm">
+<input id="itemName" placeholder="Item name" required>
+<select id="category">
+<option>Electronics</option><option>Documents</option>
+<option>Accessories</option><option>Books</option><option>Other</option>
+</select>
+<select id="status"><option>Lost</option><option>Found</option></select>
+<input id="location" placeholder="Location" required>
+<input id="photo" type="file" accept="image/*">
+<textarea id="description" placeholder="Description" required></textarea>
+<button>Publish Report</button>
+</form>
+</section>
+<section>
+<h2>Community Reports</h2>
+<div class="filters">
+<input id="search" placeholder="Search item or location">
+<select id="filter">
+<option>All</option><option>Lost</option><option>Found</option>
+</select>
+</div>
+<div id="items" class="items"></div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

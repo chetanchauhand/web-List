@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SonicWave | Music Player</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside>
+<h2>SonicWave.</h2>
+<p>YOUR MUSIC SPACE</p>
+<h3>LIBRARY</h3>
+<a href="#player">Now Playing</a>
+<a href="#playlist">My Playlist</a>
+<label class="upload">+ Add Local Songs
+<input id="fileInput" type="file" accept="audio/*" multiple hidden>
+</label>
+</aside>
+
+<main>
+<header><span>PERSONAL MUSIC PLAYER</span><button id="theme">Change Theme</button></header>
+<section class="player" id="player">
+<div class="art">♫</div>
+<p>NOW PLAYING</p>
+<h1 id="songName">Select a song</h1>
+<p id="artist">Your music library</p>
+<canvas id="visualizer"></canvas>
+<audio id="audio"></audio>
+<input type="range" id="seek" min="0" max="100" value="0">
+<div class="time"><span id="current">0:00</span><span id="duration">0:00</span></div>
+<div class="controls">
+<button id="previous">|◀</button>
+<button id="play">▶</button>
+<button id="next">▶|</button>
+</div>
+<input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+</section>
+<section id="playlist">
+<h2>Playlist</h2>
+<div id="songs"></div>
+</section>
+</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
