@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EventSphere | Discover Events</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h2>EventSphere.</h2>
+<nav><a href="#events">Discover</a><a href="#saved">Favorites</a></nav>
+</header>
+<main>
+<section class="hero">
+<p>DISCOVER WHAT'S HAPPENING</p>
+<h1>Find your next experience.</h1>
+<input id="search" placeholder="Search events...">
+</section>
+
+<section id="events">
+<div class="heading">
+<h2>Upcoming Events</h2>
+<select id="category">
+<option>All</option><option>Music</option><option>Technology</option>
+<option>Sports</option><option>Education</option>
+</select>
+</div>
+<div id="eventList" class="events"></div>
+</section>
+
+<section id="saved" class="panel">
+<h2>My Favorite Events</h2>
+<div id="favorites"></div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
