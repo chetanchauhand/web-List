@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AstroExplore | Solar System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h2>AstroExplore.</h2>
+<span>INTERACTIVE SPACE EXPLORATION</span>
+</header>
+
+<main>
+<section class="intro">
+<p>EXPLORE THE UNIVERSE</p>
+<h1>Our Solar System</h1>
+<p>Discover planets, explore their properties and travel through space.</p>
+</section>
+
+<div class="workspace">
+<section class="scene">
+<div id="solarSystem"></div>
+<div class="controls">
+<button id="zoomIn">Zoom +</button>
+<button id="zoomOut">Zoom -</button>
+<button id="reset">Reset View</button>
+</div>
+</section>
+
+<aside class="details">
+<p>PLANET INFORMATION</p>
+<h2 id="planetName">Earth</h2>
+<div id="planetDescription"></div>
+<div class="facts">
+<div><span>Distance from Sun</span><h3 id="distance">149.6 million km</h3></div>
+<div><span>Diameter</span><h3 id="diameter">12,742 km</h3></div>
+<div><span>Orbital Period</span><h3 id="period">365 days</h3></div>
+</div>
+<h3>SELECT A PLANET</h3>
+<div id="planetButtons"></div>
+</aside>
+</div>
+</main>
+<script type="module" src="script.js"></script>
+</body>
+</html>

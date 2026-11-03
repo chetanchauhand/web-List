@@ -1,0 +1,30 @@
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#050814;color:#edf0ff;font-family:Arial,sans-serif}
+header{height:75px;padding:0 7%;background:#101426;border-bottom:1px solid #252d48;display:flex;justify-content:space-between;align-items:center}
+header h2{color:#a58aff}
+header span{font-size:11px;color:#8293b5}
+main{max-width:1350px;margin:30px auto;padding:0 20px}
+.intro{text-align:center;margin-bottom:30px}
+.intro>p:first-child{color:#a58aff;letter-spacing:3px;font-size:12px}
+.intro h1{font-size:42px;margin:15px}
+.intro p:last-child{color:#98a8c5}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:20px}
+.scene{position:relative;min-height:570px;background:radial-gradient(circle at center,#172347,#070b1b 70%);border:1px solid #283452;border-radius:15px;overflow:hidden}
+#solarSystem{position:absolute;inset:0}
+.controls{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:2}
+button{padding:11px 15px;border:1px solid #5b5489;background:#24274c;color:white;border-radius:7px;cursor:pointer}
+button:hover{background:#54458d}
+.details{background:#11182b;border:1px solid #2a3551;padding:24px;border-radius:15px}
+.details>p{font-size:11px;color:#a58aff;letter-spacing:2px}
+.details h2{font-size:30px;margin:18px 0}
+#planetDescription{color:#aab8d1;line-height:1.6;min-height:90px}
+.facts{margin:20px 0}
+.facts div{padding:14px 0;border-bottom:1px solid #29334e}
+.facts span{font-size:12px;color:#94a3bf}
+.facts h3{margin-top:8px;color:#d8dcff;font-size:16px}
+.details>h3{font-size:13px;margin:25px 0 15px}
+#planetButtons{display:flex;flex-wrap:wrap;gap:8px}
+#planetButtons button{font-size:12px}
+#planetButtons button.active{background:#6453a5}
+@media(max-width:850px){.workspace{grid-template-columns:1fr}.scene{min-height:430px}.intro h1{font-size:32px}}
