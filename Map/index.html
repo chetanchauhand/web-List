@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TripCraft | Travel Planner</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+<header>
+    <h2>TripCraft.</h2>
+    <nav><a href="#explore">Explore</a><a href="#planner">Planner</a><a href="#map">Map</a></nav>
+</header>
+<main>
+<section class="hero">
+    <p>YOUR NEXT ADVENTURE STARTS HERE</p>
+    <h1>Explore the world.<br>Plan your journey.</h1>
+    <input id="search" placeholder="Search destination e.g. Manali">
+    <button onclick="searchPlace()">Explore</button>
+</section>
+<section id="explore">
+    <h2>Popular Destinations</h2>
+    <div class="destinations" id="destinations"></div>
+</section>
+<section id="planner" class="panel">
+    <h2>Build Your Trip</h2>
+    <input id="destination" placeholder="Destination">
+    <input id="days" type="number" min="1" placeholder="Number of days">
+    <input id="budget" type="number" min="0" placeholder="Total budget ₹">
+    <button onclick="createTrip()">Create Itinerary</button>
+    <div id="itinerary"></div>
+</section>
+<section id="map" class="panel">
+    <h2>Destination Map</h2>
+    <div id="mapView"></div>
+</section>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
