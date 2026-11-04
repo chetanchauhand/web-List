@@ -1,94 +1,28 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar System Explorer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div id="loader">
-        <h1>EXPLORING THE UNIVERSE</h1>
-        <p>Initializing Solar System...</p>
+<section class="nasa-section">
+    <div class="nasa-heading">
+        <span>NASA DATABASE</span>
+        <h2>Explore The Universe</h2>
+        <p>Real space images from NASA's image library.</p>
     </div>
 
-    <header>
-        <div class="logo">✦ COSMOS</div>
-        <div class="header-right">
-            <span class="live-dot"></span>
-            SOLAR SYSTEM SIMULATION
-        </div>
-    </header>
+    <div class="nasa-search">
+        <select id="planetSelect">
+            <option value="Mercury planet">Mercury</option>
+            <option value="Venus planet">Venus</option>
+            <option value="Earth planet">Earth</option>
+            <option value="Mars planet">Mars</option>
+            <option value="Jupiter planet">Jupiter</option>
+            <option value="Saturn planet">Saturn</option>
+            <option value="Uranus planet">Uranus</option>
+            <option value="Neptune planet">Neptune</option>
+            <option value="Sun NASA">Sun</option>
+        </select>
 
-    <main>
-        <section class="hero">
-            <div class="hero-text">
-                <span class="eyebrow">INTERACTIVE SPACE EXPERIENCE</span>
-                <h1>Explore Our<br><span>Solar System.</span></h1>
-                <p>
-                    Travel through space and discover the planets,
-                    their orbits and the wonders of our cosmic
-                    neighborhood.
-                </p>
-            </div>
+        <button id="nasaSearchBtn">Explore</button>
+    </div>
 
-            <div class="planet-info" id="planetInfo">
-                <span class="info-label">PLANET INFORMATION</span>
-                <h2 id="planetName">Earth</h2>
-                <p id="planetDescription">
-                    Our home planet, the only known world supporting life.
-                </p>
+    <p id="nasaStatus">Select a planet to explore NASA images.</p>
+    <div id="nasaGallery" class="nasa-gallery"></div>
+</section>
 
-                <div class="info-grid">
-                    <div>
-                        <small>DIAMETER</small>
-                        <strong id="diameter">12,742 km</strong>
-                    </div>
-                    <div>
-                        <small>ORBIT PERIOD</small>
-                        <strong id="period">365 days</strong>
-                    </div>
-                    <div>
-                        <small>MOONS</small>
-                        <strong id="moons">1</strong>
-                    </div>
-                    <div>
-                        <small>TYPE</small>
-                        <strong id="planetType">Terrestrial</strong>
-                    </div>
-                </div>
-
-                <button id="focusButton">FOCUS PLANET ↗</button>
-            </div>
-        </section>
-
-        <div id="solar-container"></div>
-
-        <section class="bottom-panel">
-            <div class="planet-list" id="planetList"></div>
-
-            <div class="controls">
-                <button id="pauseButton">Ⅱ PAUSE</button>
-
-                <div class="speed-control">
-                    <label for="speed">ORBIT SPEED</label>
-                    <input type="range" id="speed"
-                           min="0" max="5" value="1" step="0.1">
-                    <span id="speedValue">1.0x</span>
-                </div>
-
-                <button id="resetButton">↺ RESET VIEW</button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <span>THE UNIVERSE IS WAITING TO BE EXPLORED.</span>
-        <span>BUILT WITH THREE.JS</span>
-    </footer>
-
-    <script type="module" src="script.js"></script>
-</body>
-</html>
+<script src="nasa.js"></script>

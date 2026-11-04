@@ -1,305 +1,118 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;600;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: #03040a;
-    color: #fff;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
-
-header {
-    height: 75px;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ffffff12;
-    position: relative;
-    z-index: 5;
-    background: #03040add;
-}
-
-.logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-
-.header-right {
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: #aab0c4;
-}
-
-.live-dot {
-    display: inline-block;
-    height: 7px;
-    width: 7px;
-    background: #5dffb0;
-    border-radius: 50%;
-    margin-right: 8px;
-    box-shadow: 0 0 12px #5dffb0;
-}
-
-main {
-    position: relative;
-}
-
-.hero {
-    position: absolute;
-    z-index: 3;
-    top: 55px;
-    left: 5%;
-    right: 5%;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-}
-
-.hero-text,
-.planet-info {
-    pointer-events: auto;
-}
-
-.eyebrow,
-.info-label {
-    color: #9a9eb3;
-    font-size: 10px;
-    letter-spacing: 3px;
-}
-
-.hero-text h1 {
-    font-size: clamp(35px, 5vw, 65px);
-    line-height: 1.1;
-    margin: 20px 0;
-    font-weight: 800;
-}
-
-.hero-text h1 span {
-    color: #a6a5ff;
-}
-
-.hero-text p {
-    max-width: 370px;
-    color: #9da3b7;
-    font-size: 13px;
-    line-height: 1.9;
-}
-
-.planet-info {
-    width: 285px;
-    padding: 23px;
-    border: 1px solid #ffffff1b;
-    background: #090d1bd9;
-    backdrop-filter: blur(15px);
-    border-radius: 12px;
-    height: fit-content;
-}
-
-.planet-info h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 25px;
-    margin: 16px 0 10px;
-}
-
-.planet-info p {
-    font-size: 11px;
-    color: #a4abc0;
-    line-height: 1.8;
-    min-height: 60px;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 10px;
-    margin: 22px 0;
-}
-
-.info-grid div {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-.info-grid small {
-    color: #8189a1;
-    font-size: 9px;
-    letter-spacing: 1px;
-}
-
-.info-grid strong {
-    font-size: 11px;
-    font-weight: 600;
-}
-
-button {
-    cursor: pointer;
-    border: 1px solid #7775ff70;
-    background: #7775ff17;
+.nasa-section {
+    padding: 70px 7%;
+    background: #080d1b;
     color: white;
-    padding: 12px 16px;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    border-radius: 5px;
-    transition: 0.3s;
+    min-height: 500px;
 }
 
-button:hover {
-    background: #7775ff;
-    box-shadow: 0 0 20px #7775ff55;
+.nasa-heading {
+    text-align: center;
+    margin-bottom: 35px;
 }
 
-#solar-container {
-    width: 100%;
-    height: 750px;
-    position: relative;
+.nasa-heading span {
+    color: #62c8ff;
+    letter-spacing: 4px;
+    font-size: 12px;
 }
 
-#solar-container canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
+.nasa-heading h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin: 12px 0;
 }
 
-.bottom-panel {
-    position: relative;
-    z-index: 3;
-    background: #080a14;
-    border-top: 1px solid #ffffff15;
-    padding: 22px 5%;
+.nasa-heading p {
+    color: #9ca9bd;
 }
 
-.planet-list {
+.nasa-search {
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 12px;
-    flex-wrap: wrap;
     margin-bottom: 25px;
 }
 
-.planet-btn {
-    background: transparent;
-    border: 1px solid #ffffff20;
-    color: #aab0c5;
-    padding: 9px 15px;
-    border-radius: 30px;
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-.planet-btn.active {
-    border-color: #9693ff;
+.nasa-search select,
+.nasa-search button {
+    padding: 13px 18px;
+    border-radius: 8px;
+    border: 1px solid #293750;
+    background: #111c31;
     color: white;
-    background: #7775ff30;
+    font-size: 15px;
 }
 
-.controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 35px;
-    flex-wrap: wrap;
-}
-
-.speed-control {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.speed-control label {
-    color: #9299ae;
-    font-size: 9px;
-    letter-spacing: 1px;
-}
-
-.speed-control input {
-    width: 120px;
-    accent-color: #8a86ff;
+.nasa-search button {
+    background: #167ac0;
+    border: none;
     cursor: pointer;
 }
 
-.speed-control span {
-    font-size: 11px;
-    min-width: 35px;
+.nasa-search button:hover {
+    background: #2198e5;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 5%;
-    font-size: 9px;
-    letter-spacing: 1.5px;
-    color: #737b90;
-    border-top: 1px solid #ffffff12;
+#nasaStatus {
+    text-align: center;
+    color: #9ca9bd;
+    margin: 20px 0;
 }
 
-#loader {
-    position: fixed;
-    inset: 0;
-    background: #03040a;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.6s;
+.nasa-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-#loader h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
-    letter-spacing: 4px;
-    color: #aaa6ff;
+.nasa-card {
+    background: #111c31;
+    border: 1px solid #263750;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform .25s ease;
 }
 
-#loader p {
-    color: #8991a8;
-    font-size: 11px;
-    margin-top: 15px;
-    letter-spacing: 2px;
+.nasa-card:hover {
+    transform: translateY(-5px);
 }
 
-@media(max-width: 750px) {
-    .hero {
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 30px 5%;
+.nasa-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background: #050914;
+}
+
+.nasa-card-content {
+    padding: 15px;
+}
+
+.nasa-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.nasa-card p {
+    font-size: 13px;
+    color: #aab6c9;
+    line-height: 1.5;
+}
+
+.nasa-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #63c9ff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .nasa-search {
         flex-direction: column;
-        gap: 25px;
     }
 
-    .planet-info {
+    .nasa-search select,
+    .nasa-search button {
         width: 100%;
-        max-width: 400px;
-    }
-
-    #solar-container {
-        height: 520px;
-    }
-
-    .hero-text h1 {
-        font-size: 42px;
-    }
-
-    .controls {
-        gap: 20px;
-    }
-
-    footer {
-        gap: 15px;
-        flex-direction: column;
     }
 }
