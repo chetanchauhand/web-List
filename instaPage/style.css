@@ -1,0 +1,191 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    width: 350px;
+    text-align: center;
+}
+
+.login-container {
+    background: white;
+    border: 1px solid #dbdbdb;
+    padding: 35px 40px;
+    width: 100%;
+}
+
+.logo {
+    font-family: cursive;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    letter-spacing: -2px;
+}
+
+.input-group {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    outline: none;
+    font-size: 12px;
+}
+
+.input-group input:focus {
+    border-color: #a8a8a8;
+}
+
+.password-group span {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #0095f6;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #1877f2;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 10px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.options a {
+    color: #00376b;
+    text-decoration: none;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.divider span {
+    height: 1px;
+    background: #dbdbdb;
+    flex: 1;
+}
+
+.divider p {
+    font-size: 12px;
+    color: #737373;
+    font-weight: 600;
+}
+
+.facebook-login {
+    text-decoration: none;
+    color: #385185;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.facebook-login span {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#message {
+    font-size: 12px;
+    margin-top: 18px;
+    color: #d93025;
+}
+
+.signup-container {
+    background: white;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.signup-container a {
+    text-decoration: none;
+    color: #0095f6;
+    font-weight: 600;
+}
+
+.app-section {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.app-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.app-buttons a {
+    background: #222;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    color: #8e8e8e;
+    font-size: 10px;
+    line-height: 25px;
+}
+
+@media(max-width: 400px) {
+    .main-container {
+        width: 90%;
+    }
+
+    .login-container {
+        padding: 30px 20px;
+    }
+}

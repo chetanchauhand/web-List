@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="login-container">
+
+            <h1 class="logo">Instagram</h1>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <input type="text" id="username"
+                        placeholder="Phone number, username or email"
+                        required>
+                </div>
+
+                <div class="input-group password-group">
+                    <input type="password" id="password"
+                        placeholder="Password" required>
+                    <span id="togglePassword">Show</span>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Log in
+                </button>
+
+                <div class="options">
+                    <label>
+                        <input type="checkbox" id="remember">
+                        Remember me
+                    </label>
+                    <a href="#" id="forgotPassword">Forgot password?</a>
+                </div>
+
+                <div class="divider">
+                    <span></span>
+                    <p>OR</p>
+                    <span></span>
+                </div>
+
+                <a href="#" class="facebook-login">
+                    <span>f</span> Log in with Facebook
+                </a>
+
+                <p id="message"></p>
+
+            </form>
+
+        </div>
+
+        <div class="signup-container">
+            Don't have an account?
+            <a href="#">Sign up</a>
+        </div>
+
+        <div class="app-section">
+            <p>Get the app.</p>
+            <div class="app-buttons">
+                <a href="#">Google Play</a>
+                <a href="#">Microsoft Store</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>About · Blog · Jobs · Help · Privacy · Terms</p>
+        <p>© 2026 Instagram Clone Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
