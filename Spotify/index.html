@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <i class="fa-brands fa-spotify"></i>
+            <span>Spotify</span>
+        </div>
+
+        <nav class="navigation">
+            <a class="active" href="#">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
+            <a href="#" id="searchNav">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </a>
+        </nav>
+
+        <div class="library">
+
+            <div class="library-header">
+                <h3><i class="fa-solid fa-book"></i> Your Library</h3>
+                <button id="addPlaylist" title="Create playlist">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+
+            <div class="playlist-box">
+                <h4>Create your first playlist</h4>
+                <p>It's easy, we'll help you</p>
+                <button id="createPlaylist">Create playlist</button>
+            </div>
+
+            <div class="playlist-box">
+                <h4>Let's find some podcasts to follow</h4>
+                <p>We'll keep you updated on new episodes</p>
+                <button>Browse podcasts</button>
+            </div>
+
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="#">Legal</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
+            <a href="#">About</a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div class="arrows">
+                <button><i class="fa-solid fa-chevron-left"></i></button>
+                <button><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="top-actions">
+                <button class="premium">Explore Premium</button>
+                <button class="install">
+                    <i class="fa-solid fa-download"></i> Install App
+                </button>
+                <button class="profile">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+            <div class="greeting">
+                <h1>Good evening</h1>
+                <div class="filters">
+                    <button class="selected">All</button>
+                    <button>Music</button>
+                    <button>Podcasts</button>
+                </div>
+            </div>
+
+
+            <!-- QUICK PLAYLISTS -->
+            <div class="quick-grid">
+
+                <div class="quick-card" data-song="0">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=200">
+                    <span>Chill Vibes</span>
+                    <button class="quick-play">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="quick-card" data-song="1">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=200">
+                    <span>Trending Hits</span>
+                    <button class="quick-play">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="quick-card" data-song="2">
+                    <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=200">
+                    <span>Night Drive</span>
+                    <button class="quick-play">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="quick-card" data-song="3">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=200">
+                    <span>Focus Music</span>
+                    <button class="quick-play">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- TRENDING -->
+            <section class="music-section">
+
+                <div class="section-heading">
+                    <h2>Made For You</h2>
+                    <a href="#">Show all</a>
+                </div>
+
+                <div class="music-grid" id="musicGrid">
+
+                    <div class="music-card" data-song="0">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400">
+                        <button class="card-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <h3>Chill Evening</h3>
+                        <p>Relax and enjoy your day.</p>
+                    </div>
+
+                    <div class="music-card" data-song="1">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400">
+                        <button class="card-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <h3>Trending Now</h3>
+                        <p>Popular music collection.</p>
+                    </div>
+
+                    <div class="music-card" data-song="2">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400">
+                        <button class="card-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <h3>Night Drive</h3>
+                        <p>Music for late night journeys.</p>
+                    </div>
+
+                    <div class="music-card" data-song="3">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400">
+                        <button class="card-play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <h3>Deep Focus</h3>
+                        <p>Stay focused and productive.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TRENDING SONGS -->
+            <section class="music-section">
+
+                <div class="section-heading">
+                    <h2>Trending Songs</h2>
+                    <a href="#">Show all</a>
+                </div>
+
+                <div class="song-list" id="songList"></div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- MUSIC PLAYER -->
+<footer class="player">
+
+    <div class="current-song">
+
+        <img id="currentCover"
+        src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=200">
+
+        <div class="song-info">
+            <h4 id="currentTitle">Select a song</h4>
+            <p id="currentArtist">Unknown Artist</p>
+        </div>
+
+        <button class="like-btn" id="likeBtn" title="Like song">
+            <i class="fa-regular fa-heart"></i>
+        </button>
+
+    </div>
+
+
+    <div class="player-controls">
+
+        <div class="control-buttons">
+            <button id="shuffleBtn" title="Shuffle">
+                <i class="fa-solid fa-shuffle"></i>
+            </button>
+
+            <button id="previousBtn" title="Previous">
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+
+            <button class="play-main" id="playBtn" title="Play">
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+            <button id="nextBtn" title="Next">
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+
+            <button id="repeatBtn" title="Repeat">
+                <i class="fa-solid fa-repeat"></i>
+            </button>
+        </div>
+
+        <div class="progress-container">
+            <span id="currentTime">0:00</span>
+            <input type="range" id="progressBar"
+            min="0" max="100" value="0">
+            <span id="duration">0:00</span>
+        </div>
+
+    </div>
+
+
+    <div class="volume-controls">
+
+        <i class="fa-solid fa-volume-high"></i>
+
+        <input type="range" id="volumeBar"
+        min="0" max="1" step="0.01" value="0.7">
+
+    </div>
+
+</footer>
+
+
+<audio id="audioPlayer"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
