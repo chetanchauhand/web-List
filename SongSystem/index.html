@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONORA - Music Without Limits</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-wave-square"></i>
+            </div>
+            <span>SONORA</span>
+        </div>
+
+        <div class="sidebar-label">MENU</div>
+
+        <nav class="navigation">
+            <a href="#" class="nav-link active" data-page="home">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#" class="nav-link" data-page="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Discover</span>
+            </a>
+
+            <a href="#" class="nav-link" data-page="liked">
+                <i class="fa-regular fa-heart"></i>
+                <span>Liked Songs</span>
+            </a>
+
+            <a href="#" class="nav-link" data-page="recent">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Recently Played</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="library-heading">
+            <span>YOUR COLLECTION</span>
+            <button id="createPlaylist" title="Create playlist">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+
+        <div id="playlistContainer" class="playlist-container">
+            <p class="empty-playlist">Your playlists will appear here.</p>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="premium-card">
+                <i class="fa-solid fa-crown"></i>
+                <h3>Your Music Space</h3>
+                <p>Discover independent artists and explore new sounds.</p>
+            </div>
+
+            <p class="copyright">SONORA © 2026</p>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <header class="topbar">
+
+            <div class="top-navigation">
+                <button class="round-btn" id="backBtn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button class="round-btn" id="forwardBtn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="What do you want to listen to?"
+                >
+                <button id="clearSearch" title="Clear search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="user-area">
+                <span>DISCOVER MUSIC</span>
+                <div class="user-avatar">S</div>
+            </div>
+
+        </header>
+
+
+        <div class="page-content">
+
+            <!-- HOME PAGE -->
+            <section id="homePage" class="page">
+
+                <div class="hero">
+
+                    <div class="hero-content">
+                        <span class="hero-tag">
+                            <i class="fa-solid fa-sparkles"></i>
+                            YOUR DAILY SOUNDTRACK
+                        </span>
+
+                        <h1>Music for<br>every <span>moment.</span></h1>
+
+                        <p>
+                            Discover new artists, explore different genres
+                            and find your next favourite song.
+                        </p>
+
+                        <button id="exploreBtn" class="hero-btn">
+                            Explore Music
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="hero-art">
+                        <div class="art-circle circle-one"></div>
+                        <div class="art-circle circle-two"></div>
+                        <div class="hero-disc">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- GENRES -->
+
+                <section class="section">
+
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">EXPLORE</span>
+                            <h2>Choose your mood</h2>
+                        </div>
+                    </div>
+
+                    <div class="genre-grid">
+
+                        <button class="genre-card purple" data-genre="pop">
+                            <span>Pop</span>
+                            <i class="fa-solid fa-music"></i>
+                        </button>
+
+                        <button class="genre-card blue" data-genre="rock">
+                            <span>Rock</span>
+                            <i class="fa-solid fa-guitar"></i>
+                        </button>
+
+                        <button class="genre-card orange" data-genre="jazz">
+                            <span>Jazz</span>
+                            <i class="fa-solid fa-saxophone"></i>
+                        </button>
+
+                        <button class="genre-card pink" data-genre="electronic">
+                            <span>Electronic</span>
+                            <i class="fa-solid fa-headphones"></i>
+                        </button>
+
+                        <button class="genre-card green" data-genre="hiphop">
+                            <span>Hip Hop</span>
+                            <i class="fa-solid fa-microphone"></i>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- TRENDING -->
+
+                <section class="section">
+
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">FRESH DISCOVERY</span>
+                            <h2>Trending sounds</h2>
+                        </div>
+
+                        <button class="text-btn" id="refreshBtn">
+                            Refresh <i class="fa-solid fa-rotate"></i>
+                        </button>
+                    </div>
+
+                    <div class="music-grid" id="featuredGrid">
+
+                        <div class="loading">
+                            <i class="fa-solid fa-spinner fa-spin"></i>
+                            Loading music...
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- NEW MUSIC -->
+
+                <section class="section">
+
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">FIND SOMETHING NEW</span>
+                            <h2>Recommended for you</h2>
+                        </div>
+                    </div>
+
+                    <div id="recommendedGrid" class="music-grid"></div>
+
+                </section>
+
+            </section>
+
+
+            <!-- SEARCH PAGE -->
+
+            <section id="searchPage" class="page hidden">
+
+                <div class="page-heading">
+                    <span class="eyebrow">MUSIC DISCOVERY</span>
+                    <h1>Explore music</h1>
+                    <p>Search tracks, artists and discover new sounds.</p>
+                </div>
+
+                <div class="search-results-heading">
+                    <h2 id="searchHeading">Popular tracks</h2>
+                    <span id="resultCount"></span>
+                </div>
+
+                <div id="searchResults" class="search-results">
+                    <p class="empty-message">
+                        Search for a song or artist above.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- LIKED PAGE -->
+
+            <section id="likedPage" class="page hidden">
+
+                <div class="page-heading">
+                    <span class="eyebrow">YOUR COLLECTION</span>
+                    <h1>Liked Songs <i class="fa-solid fa-heart"></i></h1>
+                    <p>Your favourite discoveries in one place.</p>
+                </div>
+
+                <div id="likedResults" class="search-results"></div>
+
+            </section>
+
+
+            <!-- RECENT PAGE -->
+
+            <section id="recentPage" class="page hidden">
+
+                <div class="page-heading">
+                    <span class="eyebrow">LISTEN AGAIN</span>
+                    <h1>Recently Played</h1>
+                    <p>Your latest musical discoveries.</p>
+                </div>
+
+                <div id="recentResults" class="search-results"></div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- BOTTOM MUSIC PLAYER -->
+
+<footer class="player">
+
+    <div class="now-playing">
+
+        <img id="playerCover"
+        src="https://placehold.co/100x100/222/fff?text=SONORA">
+
+        <div class="track-info">
+            <h4 id="playerTitle">SONORA Music</h4>
+            <p id="playerArtist">Select a track to start</p>
+        </div>
+
+        <button id="likeButton" class="icon-btn">
+            <i class="fa-regular fa-heart"></i>
+        </button>
+
+    </div>
+
+
+    <div class="player-center">
+
+        <div class="player-buttons">
+
+            <button id="shuffleButton" class="icon-btn">
+                <i class="fa-solid fa-shuffle"></i>
+            </button>
+
+            <button id="previousButton" class="icon-btn">
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+
+            <button id="playButton" class="play-button">
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+            <button id="nextButton" class="icon-btn">
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+
+            <button id="repeatButton" class="icon-btn">
+                <i class="fa-solid fa-repeat"></i>
+            </button>
+
+        </div>
+
+        <div class="timeline">
+
+            <span id="currentTime">0:00</span>
+
+            <input type="range" id="seekBar"
+            min="0" max="100" value="0">
+
+            <span id="totalTime">0:00</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="player-right">
+
+        <i class="fa-solid fa-volume-high"></i>
+
+        <input type="range" id="volumeBar"
+        min="0" max="1" step="0.01" value="0.7">
+
+    </div>
+
+</footer>
+
+
+<audio id="audioPlayer" preload="metadata"></audio>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
