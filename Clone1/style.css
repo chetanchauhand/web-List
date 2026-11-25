@@ -1,0 +1,94 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background: #080808;
+}
+
+.logo {
+  color: #e50914;
+  font-size: 30px;
+}
+
+input {
+  padding: 12px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background: #222;
+  color: white;
+}
+
+.hero {
+  height: 380px;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(90deg, #000, #333, #111);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #e50914;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+main {
+  padding: 30px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.movie {
+  cursor: pointer;
+  transition: .3s;
+}
+
+.movie:hover {
+  transform: scale(1.05);
+}
+
+.movie img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.movie h3 {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+@media(max-width:600px) {
+  .hero h1 { font-size: 30px; }
+  input { width: 150px; }
+  .hero { padding: 20px; }
+}
